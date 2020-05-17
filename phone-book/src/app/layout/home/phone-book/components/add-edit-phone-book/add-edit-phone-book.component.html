@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+  <div class="md-form form-group mt-5">
+    <input mdbInput mdbValidate type="text" class="form-control" id="name" formControlName="name">
+    <label for="name">Name</label>
+    <mdb-error *ngIf="form.controls.name.invalid && (form.controls.name.dirty || form.controls.name.touched)">This field
+      is required</mdb-error>
+  </div>
+  <div class="md-form form-group mt-5">
+    <input mdbInput mdbValidate type="text" class="form-control" id="phone" formControlName="phone">
+    <label for="phone">Phone</label>
+    <mdb-error *ngIf="form.controls.phone.invalid && (form.controls.phone.dirty || form.controls.phone.touched)">This
+      field
+      is required</mdb-error>
+  </div>
+</form>
+<div>
+  <button type="button" mdbBtn color="primary" size="sm" class="relative waves-light" mdbWavesEffect
+    (click)="save()">Save
+    changes</button>
+</div>
